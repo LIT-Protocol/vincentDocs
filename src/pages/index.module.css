@@ -1,0 +1,55 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.agentSection {
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.starterButtons {
+  margin-top: 2rem;
+}
+
+.languageIcon {
+  width: 64px !important; /* Force size with !important to override potential conflicts */
+  height: 64px !important;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain; /* Ensure the image scales properly within the bounds */
+}
+
+.starterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Space between buttons */
+  align-items: center;
+}
+
