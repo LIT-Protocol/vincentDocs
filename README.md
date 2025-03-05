@@ -6,6 +6,7 @@ This website is built using [Docusaurus](https://docusaurus.io/), a modern stati
 
 ```
 $ git clone https://github.com/LIT-Protocol/vincentDocs.git
+$ cd vincentDocs
 $ npm install
 ```
 
