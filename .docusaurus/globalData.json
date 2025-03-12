@@ -1,0 +1,93 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "dca-tutorial/introduction",
+          "docs": [
+            {
+              "id": "dca-tutorial/agent",
+              "path": "/docs/dca-tutorial/agent",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "dca-tutorial/congratulations",
+              "path": "/docs/dca-tutorial/congratulations",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "dca-tutorial/dca-logic",
+              "path": "/docs/dca-tutorial/dca-logic",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "dca-tutorial/deployment",
+              "path": "/docs/dca-tutorial/deployment",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "dca-tutorial/introduction",
+              "path": "/docs/dca-tutorial/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "dca-tutorial/setup",
+              "path": "/docs/dca-tutorial/setup",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "dca-tutorial/testing",
+              "path": "/docs/dca-tutorial/testing",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "dca-tutorial/vincent-integration",
+              "path": "/docs/dca-tutorial/vincent-integration",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/docs/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "python-agentkit",
+              "path": "/docs/python-agentkit",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "typescript-agentkit",
+              "path": "/docs/typescript-agentkit",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "typescript-elizaos",
+              "path": "/docs/typescript-elizaos",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/dollar-cost-average-tutorial",
+              "path": "/docs/category/dollar-cost-average-tutorial",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/category/dollar-cost-average-tutorial",
+                "label": "Dollar Cost Average Tutorial"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

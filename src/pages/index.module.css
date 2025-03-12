@@ -32,6 +32,17 @@
   background-color: #f9f9f9; /* Light background for contrast */
 }
 
+/* Dark mode styles for agent section */
+[data-theme='dark'] .agentSection {
+  background-color: #2b2b2b; /* Darker background for dark mode */
+  color: #ffffff; /* Ensure text is visible in dark mode */
+}
+
+/* Ensure headings are visible in dark mode */
+[data-theme='dark'] .agentSection h2 {
+  color: var(--ifm-color-primary-lightest);
+}
+
 .starterButtons {
   margin-top: 2rem;
 }
@@ -52,4 +63,3 @@
   gap: 1rem; /* Space between buttons */
   align-items: center;
 }
-

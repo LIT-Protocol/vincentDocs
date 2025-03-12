@@ -1,0 +1,27 @@
+{
+  "id": "dca-tutorial/setup",
+  "title": "Setting Up Your Environment",
+  "description": "Before we can build our Dollar Cost Averaging agent, we need to set up our development environment with the necessary tools and dependencies.",
+  "source": "@site/docs/dca-tutorial/setup.md",
+  "sourceDirName": "dca-tutorial",
+  "slug": "/dca-tutorial/setup",
+  "permalink": "/docs/dca-tutorial/setup",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/LIT-Protocol/Vincent/docs/dca-tutorial/setup.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction to Dollar Cost Averaging with Vincent",
+    "permalink": "/docs/dca-tutorial/introduction"
+  },
+  "next": {
+    "title": "Creating Your DCA Agent",
+    "permalink": "/docs/dca-tutorial/agent"
+  }
+}

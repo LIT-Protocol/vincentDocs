@@ -64,7 +64,10 @@ const config = {
           onUntruncatedBlogPosts: 'warn',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: [
+            './src/css/custom.css',
+            './src/css/dark-mode.css'
+          ],
         },
       }),
     ],
@@ -76,9 +79,9 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Vincent',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Vincent Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -86,7 +89,12 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
+          },
+          {
+            to: '/docs/dca-tutorial/introduction',
+            label: 'DCA Tutorial',
+            position: 'left',
           },
           {to: 'https://spark.litprotocol.com/', label: 'Blog', position: 'left'},
           {
@@ -139,7 +147,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Vincent, Built by Lit`,
+        copyright: `Copyright ${new Date().getFullYear()} Vincent, Built by Lit`,
       },
       prism: {
         theme: prismThemes.github,

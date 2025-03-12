@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Agent Dark Mode</title>
+    <g id="Agent-Dark" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Background" fill="#333333" cx="100" cy="100" r="90"></circle>
+        <path d="M100,40 C122.091,40 140,57.909 140,80 C140,102.091 122.091,120 100,120 C77.909,120 60,102.091 60,80 C60,57.909 77.909,40 100,40 Z" id="Head" fill="#FF8C2E"></path>
+        <path d="M140,150 C140,128.909 122.091,110 100,110 C77.909,110 60,128.909 60,150" id="Body" stroke="#FF8C2E" stroke-width="8" stroke-linecap="round"></path>
+        <circle id="Eye-Left" fill="#FFFFFF" cx="85" cy="75" r="8"></circle>
+        <circle id="Eye-Right" fill="#FFFFFF" cx="115" cy="75" r="8"></circle>
+        <path d="M85,95 C90,100 110,100 115,95" id="Smile" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"></path>
+    </g>
+</svg>

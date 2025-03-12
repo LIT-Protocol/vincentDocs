@@ -1,0 +1,27 @@
+{
+  "id": "dca-tutorial/dca-logic",
+  "title": "Implementing DCA Logic",
+  "description": "In this section, we'll implement the core Dollar Cost Averaging logic that will handle the token purchases. This is where we'll define how our agent interacts with decentralized exchanges to execute trades.",
+  "source": "@site/docs/dca-tutorial/dca-logic.md",
+  "sourceDirName": "dca-tutorial",
+  "slug": "/dca-tutorial/dca-logic",
+  "permalink": "/docs/dca-tutorial/dca-logic",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/LIT-Protocol/Vincent/docs/dca-tutorial/dca-logic.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Creating Your DCA Agent",
+    "permalink": "/docs/dca-tutorial/agent"
+  },
+  "next": {
+    "title": "Securing with Vincent",
+    "permalink": "/docs/dca-tutorial/vincent-integration"
+  }
+}
