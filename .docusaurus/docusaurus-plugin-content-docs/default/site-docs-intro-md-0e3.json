@@ -1,0 +1,24 @@
+{
+  "id": "intro",
+  "title": "intro",
+  "description": "Interface for Vincent",
+  "source": "@site/docs/intro.md",
+  "sourceDirName": ".",
+  "slug": "/intro",
+  "permalink": "/docs/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/LIT-Protocol/Vincent/docs/intro.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Congratulations!",
+    "permalink": "/docs/dca-tutorial/congratulations"
+  },
+  "next": {
+    "title": "python-agentkit",
+    "permalink": "/docs/python-agentkit"
+  }
+}

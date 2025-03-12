@@ -1,0 +1,27 @@
+{
+  "id": "dca-tutorial/vincent-integration",
+  "title": "Securing with Vincent",
+  "description": "In this section, we'll integrate Vincent's secure agent wallet system to ensure our DCA agent has the appropriate permissions to execute trades on behalf of the user. Vincent provides a secure, permission-based approach that gives users full control over what actions the agent can perform.",
+  "source": "@site/docs/dca-tutorial/vincent-integration.md",
+  "sourceDirName": "dca-tutorial",
+  "slug": "/dca-tutorial/vincent-integration",
+  "permalink": "/docs/dca-tutorial/vincent-integration",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/LIT-Protocol/Vincent/docs/dca-tutorial/vincent-integration.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Implementing DCA Logic",
+    "permalink": "/docs/dca-tutorial/dca-logic"
+  },
+  "next": {
+    "title": "Testing Your DCA Agent",
+    "permalink": "/docs/dca-tutorial/testing"
+  }
+}
