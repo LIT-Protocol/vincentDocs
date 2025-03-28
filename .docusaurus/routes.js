@@ -114,93 +114,38 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', '639'),
+    component: ComponentCreator('/docs', '0bd'),
     routes: [
       {
         path: '/docs',
-        component: ComponentCreator('/docs', 'e5f'),
+        component: ComponentCreator('/docs', 'e8c'),
         routes: [
           {
             path: '/docs',
-            component: ComponentCreator('/docs', 'c6b'),
+            component: ComponentCreator('/docs', 'a5d'),
             routes: [
               {
-                path: '/docs/category/dollar-cost-average-tutorial',
-                component: ComponentCreator('/docs/category/dollar-cost-average-tutorial', 'dc0'),
+                path: '/docs/Developers/Custom-Tools',
+                component: ComponentCreator('/docs/Developers/Custom-Tools', '3db'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/dca-tutorial/agent',
-                component: ComponentCreator('/docs/dca-tutorial/agent', '8ca'),
+                path: '/docs/Developers/Quick-Start',
+                component: ComponentCreator('/docs/Developers/Quick-Start', '9da'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/dca-tutorial/congratulations',
-                component: ComponentCreator('/docs/dca-tutorial/congratulations', '65f'),
+                path: '/docs/Developers/Why-Vincent',
+                component: ComponentCreator('/docs/Developers/Why-Vincent', 'b20'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/dca-tutorial/dca-logic',
-                component: ComponentCreator('/docs/dca-tutorial/dca-logic', 'c80'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/docs/dca-tutorial/deployment',
-                component: ComponentCreator('/docs/dca-tutorial/deployment', 'a5c'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/docs/dca-tutorial/introduction',
-                component: ComponentCreator('/docs/dca-tutorial/introduction', '112'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/docs/dca-tutorial/setup',
-                component: ComponentCreator('/docs/dca-tutorial/setup', '8bd'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/docs/dca-tutorial/testing',
-                component: ComponentCreator('/docs/dca-tutorial/testing', '021'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/docs/dca-tutorial/vincent-integration',
-                component: ComponentCreator('/docs/dca-tutorial/vincent-integration', 'f9c'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/docs/intro',
-                component: ComponentCreator('/docs/intro', '61d'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/docs/python-agentkit',
-                component: ComponentCreator('/docs/python-agentkit', '4ad'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/docs/typescript-agentkit',
-                component: ComponentCreator('/docs/typescript-agentkit', 'cb8'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/docs/typescript-elizaos',
-                component: ComponentCreator('/docs/typescript-elizaos', '891'),
-                exact: true,
-                sidebar: "tutorialSidebar"
+                path: '/docs/Users/Quick-Start',
+                component: ComponentCreator('/docs/Users/Quick-Start', 'aff'),
+                exact: true
               }
             ]
           }

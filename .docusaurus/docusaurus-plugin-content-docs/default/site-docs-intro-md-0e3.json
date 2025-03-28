@@ -14,11 +14,7 @@
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Congratulations!",
-    "permalink": "/docs/dca-tutorial/congratulations"
-  },
-  "next": {
-    "title": "python-agentkit",
-    "permalink": "/docs/python-agentkit"
+    "title": "Vincent For Developers",
+    "permalink": "/docs/Developers"
   }
 }

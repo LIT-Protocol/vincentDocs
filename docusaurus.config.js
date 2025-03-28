@@ -79,21 +79,26 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Vincent',
+        // title: 'Vincent',
         logo: {
           alt: 'Vincent Logo',
           src: 'img/logo.svg',
         },
         items: [
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'tutorialSidebar',
+          //   position: 'left',
+          //   label: 'Docs',
+          // },
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            to: '/docs/Developers/Why-Vincent',
+            label: 'Developers',
             position: 'left',
-            label: 'Docs',
           },
           {
-            to: '/docs/dca-tutorial/introduction',
-            label: 'DCA Tutorial',
+            to: '/docs/Users/Quick-Start',
+            label: 'Users',
             position: 'left',
           },
           {to: 'https://spark.litprotocol.com/', label: 'Blog', position: 'left'},

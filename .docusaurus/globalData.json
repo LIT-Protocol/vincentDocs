@@ -8,71 +8,26 @@
           "label": "Next",
           "isLast": true,
           "path": "/docs",
-          "mainDocId": "dca-tutorial/introduction",
+          "mainDocId": "Developers/Why-Vincent",
           "docs": [
             {
-              "id": "dca-tutorial/agent",
-              "path": "/docs/dca-tutorial/agent",
+              "id": "Developers/Custom-Tools",
+              "path": "/docs/Developers/Custom-Tools",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "dca-tutorial/congratulations",
-              "path": "/docs/dca-tutorial/congratulations",
+              "id": "Developers/Quick-Start",
+              "path": "/docs/Developers/Quick-Start",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "dca-tutorial/dca-logic",
-              "path": "/docs/dca-tutorial/dca-logic",
+              "id": "Developers/Why-Vincent",
+              "path": "/docs/Developers/Why-Vincent",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "dca-tutorial/deployment",
-              "path": "/docs/dca-tutorial/deployment",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "dca-tutorial/introduction",
-              "path": "/docs/dca-tutorial/introduction",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "dca-tutorial/setup",
-              "path": "/docs/dca-tutorial/setup",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "dca-tutorial/testing",
-              "path": "/docs/dca-tutorial/testing",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "dca-tutorial/vincent-integration",
-              "path": "/docs/dca-tutorial/vincent-integration",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "intro",
-              "path": "/docs/intro",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "python-agentkit",
-              "path": "/docs/python-agentkit",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "typescript-agentkit",
-              "path": "/docs/typescript-agentkit",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "typescript-elizaos",
-              "path": "/docs/typescript-elizaos",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "/category/dollar-cost-average-tutorial",
-              "path": "/docs/category/dollar-cost-average-tutorial",
+              "id": "Users/Quick-Start",
+              "path": "/docs/Users/Quick-Start",
               "sidebar": "tutorialSidebar"
             }
           ],
@@ -80,8 +35,8 @@
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/docs/category/dollar-cost-average-tutorial",
-                "label": "Dollar Cost Average Tutorial"
+                "path": "/docs/Developers/Why-Vincent",
+                "label": "Developers/Why-Vincent"
               }
             }
           }
