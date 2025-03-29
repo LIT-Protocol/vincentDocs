@@ -57,7 +57,7 @@ export default {
     "navbar": {
       "logo": {
         "alt": "Vincent Logo",
-        "src": "img/logo.svg"
+        "src": "img/lit-logo.svg"
       },
       "items": [
         {
