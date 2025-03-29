@@ -27,8 +27,7 @@
             },
             {
               "id": "Users/Quick-Start",
-              "path": "/docs/Users/Quick-Start",
-              "sidebar": "tutorialSidebar"
+              "path": "/docs/Users/Quick-Start"
             }
           ],
           "draftIds": [],

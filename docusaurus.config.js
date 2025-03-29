@@ -159,6 +159,20 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+
+  // plugins: [
+  //   [
+  //     '@docusaurus/plugin-client-redirects',
+  //     {
+  //       redirects: [
+  //         {
+  //           from: '/',
+  //           to: '/docs/intro',
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // ],
 };
 
 export default config;
