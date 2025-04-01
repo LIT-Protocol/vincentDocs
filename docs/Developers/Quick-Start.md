@@ -1,6 +1,6 @@
 # Quick Start
 
-Follow the below steps to register your Vincent App:
+In this Quick Start guide you'll learn everything about Vincent Apps and how to register your own Vincent App. Follow the below steps to register your Vincent App:
 
 ## 1. Selecting Tools & Policies
 	- **Tools:** Vincent Tools are the operations that an Agent can perform on *behalf* of the user and are codified as Lit Actions. Lit Actions are immutable Javascript code snippets assigned to the Agent's wallet. As a Vincent App developer you prompt the user, via the Consent Page, to delegate the execution of these Tools for their Agent wallets thus allowing you to autonomously execute these pre-defined operations on behalf of your users.
@@ -28,6 +28,11 @@ Follow the below steps to register your Vincent App:
 
 ## 3. Using the Vincent SDK
 	- **Handle User Login:** You can use the Vincent Consent Page to sign-in users to you App instead of implementing a separate User Login flow. You need to provide a redirectUri in the URLSearch params (`https://dashboard.heyvincent.ai/appId/160/consent?redirectUri=http://localhost:3000`) to receive the signed JWT from the user's Agent Wallet after they log in on the Vincent Consent Page. This can be used as the User's Auth for your App, for example, use it as the user's access token for your API requests.
+
+	- Install the Vincent SDK using NPM:
+	```javascript
+	npm install @lit-protocol/vincent-sdk
+	```
 
 	``` javascript
 	import { VincentSDK } from '@lit-protocol/vincent-sdk';

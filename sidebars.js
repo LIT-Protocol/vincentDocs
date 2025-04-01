@@ -34,10 +34,10 @@ const sidebars = {
       label: 'Users',
       link: {
         type: 'doc',
-        id: 'Users/Quick-Start',
+        id: 'Users/Onboarding',
       },
       items: [
-        'Users/Quick-Start',
+        'Users/Onboarding',
       ],
     },
   ],
