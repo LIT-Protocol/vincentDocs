@@ -78,11 +78,15 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Lit Protocol',
             items: [
               {
-                label: 'Tutorial',
-                to: '/Why-Vincent',
+                label: 'Learn More',
+                href: 'https://www.litprotocol.com/',
+              },
+              {
+                label: 'Developer Docs',
+                href: 'https://developer.litprotocol.com/',
               },
             ],
           },
@@ -117,7 +121,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright ${new Date().getFullYear()} Vincent, Built by Lit`,
+        copyright: `Copyright ${new Date().getFullYear()} Vincent, By Lit`,
       },
       prism: {
         theme: prismThemes.github,

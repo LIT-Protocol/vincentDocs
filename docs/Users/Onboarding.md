@@ -1,3 +1,7 @@
+---
+pagination_next: Contact-Us
+---
+
 # Onboarding
 
 When you visit an app that uses Vincent for Authentication you'll be directed to a Consent Page where you can review the permissions requested by the application and provide precisely scoped delegation to it. Follow the following steps to onboard to the Vincent ecosystem:
