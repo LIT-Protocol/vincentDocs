@@ -11,19 +11,12 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Welcome to Vincent',
-  tagline: 'AI Agent Management',
+  tagline: 'AI Agent Wallet Delegation Management',
   favicon: 'img/favicon.ico',
-
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  url: 'https://docs.heyvincent.ai',
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'LIT-Protocol', // Usually your GitHub org/user name.
-  projectName: 'vincent', // Usually your repo name.
+  organizationName: 'LIT-Protocol',
+  projectName: 'vincent',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -43,25 +36,9 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/LIT-Protocol/Vincent',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/LIT-Protocol/Vincent',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+            'https://github.com/LIT-Protocol/vincentDocs',
+          routeBasePath: '/',
         },
         theme: {
           customCss: [
@@ -77,27 +54,20 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/lit-logo.svg',
       navbar: {
-        // title: 'Vincent',
         logo: {
           alt: 'Vincent Logo',
           src: 'img/lit-logo.svg',
         },
         items: [
-          // {
-          //   type: 'docSidebar',
-          //   sidebarId: 'tutorialSidebar',
-          //   position: 'left',
-          //   label: 'Docs',
-          // },
           {
-            to: '/docs/Developers/Why-Vincent',
+            to: '/Developers/Why-Vincent',
             label: 'Developers',
             position: 'left',
           },
           {
-            to: '/docs/Users/Quick-Start',
+            to: '/Users/Quick-Start',
             label: 'Users',
             position: 'left',
           },
@@ -117,7 +87,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/Developers/Why-Vincent',
               },
             ],
           },
@@ -159,20 +129,6 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
-
-  // plugins: [
-  //   [
-  //     '@docusaurus/plugin-client-redirects',
-  //     {
-  //       redirects: [
-  //         {
-  //           from: '/',
-  //           to: '/docs/intro',
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // ],
 };
 
 export default config;
