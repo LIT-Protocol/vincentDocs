@@ -121,7 +121,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright ${new Date().getFullYear()} Vincent, By Lit`,
+        copyright: `Copyright ${new Date().getFullYear()} Vincent, By Lit Protocol`,
       },
       prism: {
         theme: prismThemes.github,
