@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Welcome to Vincent',
   tagline: 'AI Agent Wallet Delegation Management',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/vincent-favicon.png',
   url: 'https://docs.heyvincent.ai',
   baseUrl: '/',
   organizationName: 'LIT-Protocol',
@@ -58,7 +58,7 @@ const config = {
       navbar: {
         logo: {
           alt: 'Vincent Logo',
-          src: 'img/lit-logo.svg',
+          src: 'img/vincent-logo-black.png',
         },
         items: [
           {
