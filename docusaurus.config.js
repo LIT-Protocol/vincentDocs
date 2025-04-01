@@ -62,13 +62,8 @@ const config = {
         },
         items: [
           {
-            to: '/Developers/Why-Vincent',
-            label: 'Developers',
-            position: 'left',
-          },
-          {
-            to: '/Users/Quick-Start',
-            label: 'Users',
+            to: '/',
+            label: 'Docs',
             position: 'left',
           },
           {to: 'https://spark.litprotocol.com/', label: 'Blog', position: 'left'},
@@ -87,7 +82,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/Developers/Why-Vincent',
+                to: '/Why-Vincent',
               },
             ],
           },

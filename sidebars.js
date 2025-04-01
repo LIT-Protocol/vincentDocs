@@ -20,7 +20,7 @@ const sidebars = {
 
   // But you can create a sidebar manually
   tutorialSidebar: [
-    'Developers/Why-Vincent',
+    'Why-Vincent',
     'Developers/Quick-Start',
     'Developers/Custom-Tools',
     // {

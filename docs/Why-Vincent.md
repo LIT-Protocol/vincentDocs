@@ -1,3 +1,7 @@
+---
+slug: /
+---
+
 # Why Vincent?
 
 # Overview
