@@ -14,8 +14,8 @@
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "python-agentkit",
-    "permalink": "/docs/python-agentkit"
+    "title": "intro",
+    "permalink": "/docs/intro"
   },
   "next": {
     "title": "@elizaos/plugin-lit",

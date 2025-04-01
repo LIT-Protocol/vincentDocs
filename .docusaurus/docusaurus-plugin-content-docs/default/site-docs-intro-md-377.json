@@ -1,20 +1,20 @@
 {
-  "id": "intro",
-  "title": "intro",
+  "id": "Intro",
+  "title": "Intro",
   "description": "Interface for Vincent",
-  "source": "@site/docs/intro.md",
+  "source": "@site/docs/Intro.md",
   "sourceDirName": ".",
-  "slug": "/intro",
-  "permalink": "/docs/intro",
+  "slug": "/Intro",
+  "permalink": "/docs/Intro",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/LIT-Protocol/Vincent/docs/intro.md",
+  "editUrl": "https://github.com/LIT-Protocol/Vincent/docs/Intro.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Vincent For Developers",
-    "permalink": "/docs/Developers"
+    "permalink": "/docs/Building Apps"
   }
 }

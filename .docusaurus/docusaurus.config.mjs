@@ -55,21 +55,19 @@ export default {
   "themeConfig": {
     "image": "img/docusaurus-social-card.jpg",
     "navbar": {
-      "title": "Vincent",
       "logo": {
         "alt": "Vincent Logo",
-        "src": "img/logo.svg"
+        "src": "img/lit-logo.svg"
       },
       "items": [
         {
-          "type": "docSidebar",
-          "sidebarId": "tutorialSidebar",
-          "position": "left",
-          "label": "Docs"
+          "to": "/docs/Developers/Why-Vincent",
+          "label": "Developers",
+          "position": "left"
         },
         {
-          "to": "/docs/dca-tutorial/introduction",
-          "label": "DCA Tutorial",
+          "to": "/docs/Users/Quick-Start",
+          "label": "Users",
           "position": "left"
         },
         {

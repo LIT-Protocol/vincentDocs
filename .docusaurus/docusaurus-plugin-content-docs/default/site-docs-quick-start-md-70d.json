@@ -1,0 +1,20 @@
+{
+  "id": "Quick-Start",
+  "title": "Quick Start",
+  "description": "Vincent enables user's to delegate their wallets to Agentic applications for autonomous signing. Users can precisely define the scope of their delegation. For example, a delegated agent can sign only Uniswap swap transactions for a max of $100/day but it won't be able to sign any other type of transactions or exceed the spend limit set by the user. Follow the below steps to register your Vincent App:",
+  "source": "@site/docs/Quick-Start.md",
+  "sourceDirName": ".",
+  "slug": "/Quick-Start",
+  "permalink": "/docs/Quick-Start",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/LIT-Protocol/Vincent/docs/Quick-Start.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Why use Vincent?",
+    "permalink": "/docs/Why-Vincent"
+  }
+}
