@@ -18,7 +18,7 @@ In this Quick Start guide you'll learn everything about Vincent Apps and how to 
 
 	- **Selecting from existing Tool-Policy Registry:** You can select any of the following available Tools & their Policies to get quickly off the ground and register your Vincent App.
 
-		**Table of Tools & Policies:**
+		**Available Tools & Policies:**
 		| Tool | IPFS Cid |
 		|------|--------|
 		| ERC20 Token Approval  | QmPZ46EiurxMb7DmE9McFyzHfg2B6ZGEERui2tnNNX7cky |
@@ -49,7 +49,13 @@ In this Quick Start guide you'll learn everything about Vincent Apps and how to 
 	![Add Delegatees](./images/add-delegatee.png)
 
 ## 3. Using the Vincent SDK
-	- **Handle User Login:** You can use the Vincent Consent Page to sign-in users to you App instead of implementing a separate User Login flow. You need to provide a redirectUri in the URLSearch params (`https://dashboard.heyvincent.ai/appId/160/consent?redirectUri=http://localhost:3000`) to receive the signed JWT from the user's Agent Wallet after they log in on the Vincent Consent Page. This can be used as the User's Auth for your App, for example, use it as the user's access token for your API requests.
+
+	:::info Vincent SDK
+
+	Please refer to the Vincent SDK API docs for a more comprehensive guide: https://sdk-docs.heyvincent.ai/
+	:::
+
+	- **[Handle User Login](https://sdk-docs.heyvincent.ai/Vincent_Web_App/VincentWebAppClient.html#redirecttoconsentpage):** You can use the Vincent Consent Page to sign-in users to you App instead of implementing a separate User Login flow. You need to provide a redirectUri in the URLSearch params (`https://dashboard.heyvincent.ai/appId/160/consent?redirectUri=http://localhost:3000`) to receive the signed JWT from the user's Agent Wallet after they log in on the Vincent Consent Page. This can be used as the User's Auth for your App, for example, use it as the user's access token for your API requests.
 
 	- Install the Vincent SDK using NPM:
 	```javascript
@@ -57,29 +63,30 @@ In this Quick Start guide you'll learn everything about Vincent Apps and how to 
 	```
 
 	``` javascript
-	import { VincentSDK } from '@lit-protocol/vincent-sdk';
-	import { ethers } from 'ethers';
+	import { getVincentWebAppClient } from '@lit-protocol/vincent-sdk';
 
-	const vincentSdk = new VincentSDK();
-	const jwt = (await vincentSdk.getJWT()) || new URLSearchParams(window.location.search).get('jwt');
-
-	await vincentSdk.storeJWT(jwt ?? '');
-	const jwtVerifies = await vincentSdk.verifyJWT(window.location.origin);
-	if (!jwt || !jwtVerifies) {
-		return await vincentSdk.clearJWT(); // Clear any leftover and logout
+	const vincentAppClient = getVincentWebAppClient({ appId: MY_APP_ID });
+	
+	// ... In your app logic:
+	if(vincentAppClient.isLogin()) {
+	  // Handle app logic for the user has just logged in
+	  const { decoded, jwt } = vincentAppClient.decodeVincentLoginJWT(EXPECTED_AUDIENCE);
+	  // Store `jwt` for later usage; the user is now logged in.
+	} else {
+	  // Handle app logic for the user is already logged in (check for stored & unexpired JWT)
+	  // Handle app logic for the user is not yet logged in
+	  vincentAppClient.redirectToConsentPage({ redirectUri: window.location.href });
 	}
-
-	const decodedJWT = await vincentSdk.decodeJWT();
-	const userAgentWalletPublickey = decodedJWT.payload.pkpPublicKey as string;
-	const userAgentWalletAddress = ethers.utils.computeAddress(userAgentWalletPublickey);
 	```
 
-	- **Execute Tools for User's Wallet:** You need to create SessionSigs using your Delegatee wallet and use it to call the `executeJs()` function for the permitted Tool. This is where you provide all your AI-Agentic logic in the jsParams of the `executeJs()`, for example, the tokens to buy and at what price. You can also query all the delegated users for your App using `getAllDelegatedUsers()`.
+	- **[Execute Tools for User's Wallet](https://sdk-docs.heyvincent.ai/Vincent_Tools/VincentToolClient.html#execute):** You need to create SessionSigs using your Delegatee wallet and use it to call the `executeJs()` function for the permitted Tool. This is where you provide all your AI-Agentic logic in the jsParams of the `executeJs()`, for example, the tokens to buy and at what price. You can also query all the delegated users for your App using `getAllDelegatedUsers()`.
 
 	```javascript
 	import { ethers } from 'ethers';
+	import { getVincentToolClient } from '@lit-protocol/vincent-sdk';
 
 	const delegateePrivateKey = DELEGATEE_PRIVATE_KEY_GENERATED_FROM_APP_DASHBOARD;
 	const delegateeSigner = new ethers.Wallet(delegateePrivateKey, provider);
-	const res = await invokeLitAction(delegateeSigner, toolIpfsCid, params); // This is the result of executing the Tool usually a txReceipt for the broadcasted tx
+	const vincentToolClient = getVincentToolClient({ ethersSigner: delegateeSigner, vincentToolCid: YOUR_TOOL_IPFS_CID });
+	const res = await vincentToolClient.execute({ params }); // This is the result of executing the Tool usually a txReceipt for the broadcasted tx
 	```
