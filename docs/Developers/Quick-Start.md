@@ -1,5 +1,12 @@
 # Quick Start
 
+	:::info App Dashboard
+	
+	Please follow the below steps to register your App using the Dashboard here: https://dashboard.heyvincent.ai/.
+
+	Registering an App requires that you have gas on our Yellowstone blockchain. You can use the faucet to get some tokens for registering your App: https://chronicle-yellowstone-faucet.getlit.dev/.
+	:::
+
 In this Quick Start guide you'll learn everything about Vincent Apps and how to register your own Vincent App. Follow the below steps to register your Vincent App:
 
 ## 1. Selecting Tools & Policies
@@ -9,11 +16,26 @@ In this Quick Start guide you'll learn everything about Vincent Apps and how to 
 
 	- **Policy Variables:** Each Policy can optionally have multiple Policy Vars. For example, max spend policy can have two vars: spend duration (hourly/daily/weekly) and max spend amount ($). These Policy Vars are fully configurable by the user.
 
-	- **Selecting from existing Tool-Policy Registry:** We maintain a [repository](https://github.com/LIT-Protocol/Vincent/tree/wyatt/uniswap-tool-refactor/packages/vincent-tool-uniswap-swap) of common Tool & Policy Lit Actions which are readily available to all the Vincent Apps to help you get quickly off the ground. You can select any of these Tools & their Policies to register your Vincent App or write your own custom Tools. It's an ever expanding list and we're actively adding more Tools & Policies to the Registry.
+	- **Selecting from existing Tool-Policy Registry:** You can select any of the following available Tools & their Policies to get quickly off the ground and register your Vincent App.
 
-	- **Writing your own Tools & Policies:** If none of the available Tool/Policies meet your needs you can write your own Lit Actions that signs using the user's delegated wallet.
+		**Table of Tools & Policies:**
+		| Tool | IPFS Cid |
+		|------|--------|
+		| ERC20 Token Approval  | QmPZ46EiurxMb7DmE9McFyzHfg2B6ZGEERui2tnNNX7cky |
+		| Uniswap Tool | QmZbh52JYnutuFURnpwfywfiiHuFoJpqFyFzNiMtbiDNkK |
+
+		| Policy | IPFS Cid |
+		|------|--------|
+		| Spending Limit  | QmZrG2DFvVDgo3hZgpUn31TUgrHYfLQA2qEpAo3tnKmzhQ |
+
+		It's an ever expanding list and we're actively adding more Tools & Policies to the Registry.
+
+		**Note:** The DCA example uses both the ERC20 Token Approval Tool & the Uniswap Tool because the user's first need to approve the ERC20 tokens to be used by the Uniswap contracts. Then they can set a spending limit for the Uniswap Tool.
+
+	- **Writing your own Tools & Policies:** If none of the available Tool/Policies meet your needs you can [write your own Lit Actions](./Custom-Tools.md) that signs using the user's delegated wallet.
 
 ## 2. Registering an App using the App Dashboard
+
 	- **Management Wallet:** Once you've selected your Tools & Policies (IPFS Cids) head over to the App Dashboard where you need to connect your EOA wallet. This is your App management account which is used for adding Delegatees, registering Vincent Apps on-chain and publishing newer versions of your existing Vincent Apps.
 
 	![Connect App Management Wallet](./images/connect-app-management-wallet.png)
