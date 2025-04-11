@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Welcome to Vincent',
+  title: 'Vincent',
   tagline: 'AI Agent Wallet Delegation Management',
   favicon: 'img/vincent-favicon.png',
   url: 'https://docs.heyvincent.ai',
@@ -88,6 +88,10 @@ const config = {
                 label: 'Developer Docs',
                 href: 'https://developer.litprotocol.com/',
               },
+              {
+                label: 'Blogs',
+                href: 'https://spark.litprotocol.com/',
+              },
             ],
           },
           {
@@ -108,20 +112,24 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: 'Vincent',
             items: [
               {
-                label: 'Blog',
-                href: 'https://spark.litprotocol.com/',
+                label: 'SDK API Docs',
+                href: 'https://sdk-docs.heyvincent.ai/',
               },
               {
-                label: 'GitHub',
+                label: 'Github',
                 href: 'https://github.com/LIT-Protocol/Vincent',
+              },
+              {
+                label: 'Docs Repo',
+                href: 'https://github.com/LIT-Protocol/vincentDocs',
               },
             ],
           },
         ],
-        copyright: `Copyright ${new Date().getFullYear()} Vincent, By Lit`,
+        copyright: `Copyright ${new Date().getFullYear()} Vincent, By Lit Protocol`,
       },
       prism: {
         theme: prismThemes.github,

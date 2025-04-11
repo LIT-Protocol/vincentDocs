@@ -1,5 +1,12 @@
 # Quick Start
 
+	:::info App Dashboard
+	
+	Please follow the below steps to register your App using the Dashboard here: https://dashboard.heyvincent.ai/.
+
+	Registering an App requires that you have gas on our Yellowstone blockchain. You can use the faucet to get some tokens for registering your App: https://chronicle-yellowstone-faucet.getlit.dev/.
+	:::
+
 In this Quick Start guide you'll learn everything about Vincent Apps and how to register your own Vincent App. Follow the below steps to register your Vincent App:
 
 ## 1. Selecting Tools & Policies
@@ -9,11 +16,26 @@ In this Quick Start guide you'll learn everything about Vincent Apps and how to 
 
 	- **Policy Variables:** Each Policy can optionally have multiple Policy Vars. For example, max spend policy can have two vars: spend duration (hourly/daily/weekly) and max spend amount ($). These Policy Vars are fully configurable by the user.
 
-	- **Selecting from existing Tool-Policy Registry:** We maintain a [repository](https://github.com/LIT-Protocol/Vincent/tree/wyatt/uniswap-tool-refactor/packages/vincent-tool-uniswap-swap) of common Tool & Policy Lit Actions which are readily available to all the Vincent Apps to help you get quickly off the ground. You can select any of these Tools & their Policies to register your Vincent App or write your own custom Tools. It's an ever expanding list and we're actively adding more Tools & Policies to the Registry.
+	- **Selecting from existing Tool-Policy Registry:** You can select any of the following available Tools & their Policies to get quickly off the ground and register your Vincent App.
 
-	- **Writing your own Tools & Policies:** If none of the available Tool/Policies meet your needs you can write your own Lit Actions that signs using the user's delegated wallet.
+		**Available Tools & Policies:**
+		| Tool | IPFS Cid |
+		|------|--------|
+		| ERC20 Token Approval  | QmPZ46EiurxMb7DmE9McFyzHfg2B6ZGEERui2tnNNX7cky |
+		| Uniswap Tool | QmZbh52JYnutuFURnpwfywfiiHuFoJpqFyFzNiMtbiDNkK |
+
+		| Policy | IPFS Cid |
+		|------|--------|
+		| Spending Limit  | QmZrG2DFvVDgo3hZgpUn31TUgrHYfLQA2qEpAo3tnKmzhQ |
+
+		It's an ever expanding list and we're actively adding more Tools & Policies to the Registry.
+
+		**Note:** The DCA example uses both the ERC20 Token Approval Tool & the Uniswap Tool because the user's first need to approve the ERC20 tokens to be used by the Uniswap contracts. Then they can set a spending limit for the Uniswap Tool.
+
+	- **Writing your own Tools & Policies:** If none of the available Tool/Policies meet your needs you can [write your own Lit Actions](./Custom-Tools.md) that signs using the user's delegated wallet.
 
 ## 2. Registering an App using the App Dashboard
+
 	- **Management Wallet:** Once you've selected your Tools & Policies (IPFS Cids) head over to the App Dashboard where you need to connect your EOA wallet. This is your App management account which is used for adding Delegatees, registering Vincent Apps on-chain and publishing newer versions of your existing Vincent Apps.
 
 	![Connect App Management Wallet](./images/connect-app-management-wallet.png)
@@ -27,7 +49,13 @@ In this Quick Start guide you'll learn everything about Vincent Apps and how to 
 	![Add Delegatees](./images/add-delegatee.png)
 
 ## 3. Using the Vincent SDK
-	- **Handle User Login:** You can use the Vincent Consent Page to sign-in users to you App instead of implementing a separate User Login flow. You need to provide a redirectUri in the URLSearch params (`https://dashboard.heyvincent.ai/appId/160/consent?redirectUri=http://localhost:3000`) to receive the signed JWT from the user's Agent Wallet after they log in on the Vincent Consent Page. This can be used as the User's Auth for your App, for example, use it as the user's access token for your API requests.
+
+	:::info Vincent SDK
+
+	Please refer to the Vincent SDK API docs for a more comprehensive guide: https://sdk-docs.heyvincent.ai/
+	:::
+
+	- **[Handle User Login](https://sdk-docs.heyvincent.ai/Vincent_Web_App/VincentWebAppClient.html#redirecttoconsentpage):** You can use the Vincent Consent Page to sign-in users to you App instead of implementing a separate User Login flow. You need to provide a redirectUri in the URLSearch params (`https://dashboard.heyvincent.ai/appId/160/consent?redirectUri=http://localhost:3000`) to receive the signed JWT from the user's Agent Wallet after they log in on the Vincent Consent Page. This can be used as the User's Auth for your App, for example, use it as the user's access token for your API requests.
 
 	- Install the Vincent SDK using NPM:
 	```javascript
@@ -35,29 +63,30 @@ In this Quick Start guide you'll learn everything about Vincent Apps and how to 
 	```
 
 	``` javascript
-	import { VincentSDK } from '@lit-protocol/vincent-sdk';
-	import { ethers } from 'ethers';
+	import { getVincentWebAppClient } from '@lit-protocol/vincent-sdk';
 
-	const vincentSdk = new VincentSDK();
-	const jwt = (await vincentSdk.getJWT()) || new URLSearchParams(window.location.search).get('jwt');
-
-	await vincentSdk.storeJWT(jwt ?? '');
-	const jwtVerifies = await vincentSdk.verifyJWT(window.location.origin);
-	if (!jwt || !jwtVerifies) {
-		return await vincentSdk.clearJWT(); // Clear any leftover and logout
+	const vincentAppClient = getVincentWebAppClient({ appId: MY_APP_ID });
+	
+	// ... In your app logic:
+	if(vincentAppClient.isLogin()) {
+	  // Handle app logic for the user has just logged in
+	  const { decoded, jwt } = vincentAppClient.decodeVincentLoginJWT(EXPECTED_AUDIENCE);
+	  // Store `jwt` for later usage; the user is now logged in.
+	} else {
+	  // Handle app logic for the user is already logged in (check for stored & unexpired JWT)
+	  // Handle app logic for the user is not yet logged in
+	  vincentAppClient.redirectToConsentPage({ redirectUri: window.location.href });
 	}
-
-	const decodedJWT = await vincentSdk.decodeJWT();
-	const userAgentWalletPublickey = decodedJWT.payload.pkpPublicKey as string;
-	const userAgentWalletAddress = ethers.utils.computeAddress(userAgentWalletPublickey);
 	```
 
-	- **Execute Tools for User's Wallet:** You need to create SessionSigs using your Delegatee wallet and use it to call the `executeJs()` function for the permitted Tool. This is where you provide all your AI-Agentic logic in the jsParams of the `executeJs()`, for example, the tokens to buy and at what price. You can also query all the delegated users for your App using `getAllDelegatedUsers()`.
+	- **[Execute Tools for User's Wallet](https://sdk-docs.heyvincent.ai/Vincent_Tools/VincentToolClient.html#execute):** You need to create SessionSigs using your Delegatee wallet and use it to call the `executeJs()` function for the permitted Tool. This is where you provide all your AI-Agentic logic in the jsParams of the `executeJs()`, for example, the tokens to buy and at what price. You can also query all the delegated users for your App using `getAllDelegatedUsers()`.
 
 	```javascript
 	import { ethers } from 'ethers';
+	import { getVincentToolClient } from '@lit-protocol/vincent-sdk';
 
 	const delegateePrivateKey = DELEGATEE_PRIVATE_KEY_GENERATED_FROM_APP_DASHBOARD;
 	const delegateeSigner = new ethers.Wallet(delegateePrivateKey, provider);
-	const res = await invokeLitAction(delegateeSigner, toolIpfsCid, params); // This is the result of executing the Tool usually a txReceipt for the broadcasted tx
+	const vincentToolClient = getVincentToolClient({ ethersSigner: delegateeSigner, vincentToolCid: YOUR_TOOL_IPFS_CID });
+	const res = await vincentToolClient.execute({ params }); // This is the result of executing the Tool usually a txReceipt for the broadcasted tx
 	```
