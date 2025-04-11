@@ -1,14 +1,5 @@
 # Custom Tools
 
-If any available Tools/Policies don't meet your needs you can write your own Lit Actions and use them as Custom Tools/Policies:
+If the [available Tools and Policies](./Quick-Start.md#1-selecting-tools--policies) don't meet your application's needs, you can write your own Lit Actions and use them as Custom Tools and Policies
 
-    **Available Tools & Policies:**
-    | Tool | IPFS Cid |
-    |------|--------|
-    | ERC20 Token Approval  | QmPZ46EiurxMb7DmE9McFyzHfg2B6ZGEERui2tnNNX7cky |
-    | Uniswap Tool | QmZbh52JYnutuFURnpwfywfiiHuFoJpqFyFzNiMtbiDNkK |
-
-    | Policy | IPFS Cid |
-    |------|--------|
-    | Spending Limit  | QmZrG2DFvVDgo3hZgpUn31TUgrHYfLQA2qEpAo3tnKmzhQ |
-
+A specification with best practices on how to write custom Tools and Policies is coming soon. In the meantime, please visit the [Vincent Telegram channel](https://t.me/c/2038294753/3289) to connect with us on the Tool and/or Policies you're interested in building, and we can provide further support and guidance.
