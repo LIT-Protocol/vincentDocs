@@ -4,8 +4,8 @@ slug: /
 
 # Why Vincent?
 
-	:::info App Dashboard
-	Try out the Dollar-Cost-Averaging demo that buys top memecoins on Base here: https://demo.heyvincent.ai/
+	:::info Demo
+	Try out the Dollar-Cost-Averaging [demo](https://demo.heyvincent.ai/) that buys top memecoins on Base.
 	:::
 
 # Overview

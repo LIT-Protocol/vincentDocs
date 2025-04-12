@@ -1,13 +1,8 @@
 # Quick Start
+	:::info Demo
+	Try out the [Dollar-Cost-Averaging demo](https://demo.heyvincent.ai/) that buys top memecoins on Base.
 
-	:::info App Dashboard
-	Try out the Dollar-Cost-Averaging demo that buys top memecoins on Base here: https://demo.heyvincent.ai/
-
-	You can follow the end-to-end code for the DCA demo here: https://github.com/LIT-Protocol/vincent-dca/tree/main
-
-	Please follow the below steps to register your App using the Dashboard here: https://dashboard.heyvincent.ai/.
-
-	Registering an App requires that you have gas on our Yellowstone blockchain. You can use the faucet to get some tokens for registering your App: https://chronicle-yellowstone-faucet.getlit.dev/.
+	You can follow the [end-to-end code](https://github.com/LIT-Protocol/vincent-dca/tree/main) for the DCA demo.
 	:::
 
 In this Quick Start guide you'll learn everything about Vincent Apps and how to register your own Vincent App. Follow the below steps to register your Vincent App:
@@ -38,6 +33,13 @@ In this Quick Start guide you'll learn everything about Vincent Apps and how to 
 	- **Writing your own Tools & Policies:** If none of the available Tool/Policies meet your needs you can [write your own Lit Actions](./Custom-Tools.md) that signs using the user's delegated wallet.
 
 ## 2. Registering an App using the App Dashboard
+
+	:::info App Dashboard
+
+	Please follow the below steps to register your App using the [Dashboard](https://dashboard.heyvincent.ai/).
+
+	Registering an App requires that you have gas on our Yellowstone blockchain. You can use the [faucet](https://chronicle-yellowstone-faucet.getlit.dev/) to get some tokens for registering your App.
+	:::
 
 	- **Management Wallet:** Once you've selected your Tools & Policies (IPFS Cids) head over to the App Dashboard where you need to connect your EOA wallet. This is your App management account which is used for adding Delegatees, registering Vincent Apps on-chain and publishing newer versions of your existing Vincent Apps.
 
