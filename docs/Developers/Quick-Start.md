@@ -1,7 +1,10 @@
 # Quick Start
 
 	:::info App Dashboard
-	
+	Try out the Dollar-Cost-Averaging demo that buys top memecoins on Base here: https://demo.heyvincent.ai/
+
+	You can follow the end-to-end code for the DCA demo here: https://github.com/LIT-Protocol/vincent-dca/tree/main
+
 	Please follow the below steps to register your App using the Dashboard here: https://dashboard.heyvincent.ai/.
 
 	Registering an App requires that you have gas on our Yellowstone blockchain. You can use the faucet to get some tokens for registering your App: https://chronicle-yellowstone-faucet.getlit.dev/.
@@ -10,11 +13,11 @@
 In this Quick Start guide you'll learn everything about Vincent Apps and how to register your own Vincent App. Follow the below steps to register your Vincent App:
 
 ## 1. Selecting Tools & Policies
-	- **Tools:** Vincent Tools are the operations that an Agent can perform on *behalf* of the user and are codified as Lit Actions. Lit Actions are immutable Javascript code snippets assigned to the Agent's wallet. As a Vincent App developer you prompt the user, via the Consent Page, to delegate the execution of these Tools for their Agent wallets thus allowing you to autonomously execute these pre-defined operations on behalf of your users.
+	- **Tools:** Vincent Tools are the operations that an Agent can perform on *behalf* of the user and are codified as Lit Actions. Lit Actions are immutable Javascript code snippets assigned to the Agent's wallet. As a Vincent App developer you prompt the user, via the [Consent Page](../Users/Onboarding.md), to delegate the execution of these Tools for their Agent wallets thus allowing you to autonomously execute these pre-defined operations on behalf of your users.
 
 	- **Policies:** Users can set guard-rails for the permitted Tools to dictate the operating conditions for that Tool. Tools can have multiple Policies like max daily spend or 2FA and all these policies should be met before the Tool can sign using the delegated user's Agent wallet. This also becomes important since your AI Agents can occasionally halucinate. Just like the Tools, Policies are also codified as Lit Action and you as a developer prompt the user a set of optional Policies for each Tool via the Consent Page.
 
-	- **Policy Variables:** Each Policy can optionally have multiple Policy Vars. For example, max spend policy can have two vars: spend duration (hourly/daily/weekly) and max spend amount ($). These Policy Vars are fully configurable by the user.
+	- **Policy Variables:** Each Policy can optionally have multiple Policy Vars. For example, max spend policy can have two vars: spend duration (hourly/daily/weekly) and max spend amount ($). These Policy Vars values are fully configurable by the user.
 
 	- **Selecting from existing Tool-Policy Registry:** You can select any of the following available Tools & their Policies to get quickly off the ground and register your Vincent App.
 
@@ -44,7 +47,7 @@ In this Quick Start guide you'll learn everything about Vincent Apps and how to 
 
 	![Create New App](./images/create-new-app.png)
 
-	- **Delegatees:** Delegatees are EOA wallets generated in the App Dashboard that are allowed to execute the permitted Tools on behalf of your users. You need to register these Delegatee addresses on-chain and the Tools check whether the executor matches the on-chain Delegatee registered for the App. You need to create a SessionSig using your Delegatee and provide it to execute the Tool Lit Action.
+	- **Delegatees:** Delegatees are EOA wallets generated in the App Dashboard that are allowed to execute the permitted Tools on behalf of your users. You need to register these Delegatee addresses on-chain and the Tools check whether the executor matches the on-chain Delegatee registered for the App.
 
 	![Add Delegatees](./images/add-delegatee.png)
 
@@ -55,7 +58,7 @@ In this Quick Start guide you'll learn everything about Vincent Apps and how to 
 	Please refer to the Vincent SDK API docs for a more comprehensive guide: https://sdk-docs.heyvincent.ai/
 	:::
 
-	- **[Handle User Login](https://sdk-docs.heyvincent.ai/Vincent_Web_App/VincentWebAppClient.html#redirecttoconsentpage):** You can use the Vincent Consent Page to sign-in users to you App instead of implementing a separate User Login flow. You need to provide a redirectUri in the URLSearch params (`https://dashboard.heyvincent.ai/appId/160/consent?redirectUri=http://localhost:3000`) to receive the signed JWT from the user's Agent Wallet after they log in on the Vincent Consent Page. This can be used as the User's Auth for your App, for example, use it as the user's access token for your API requests.
+	- **[Handle User Login](https://sdk-docs.heyvincent.ai/Vincent_Web_App/VincentWebAppClient.html#redirecttoconsentpage):** You can use the Vincent Consent Page to sign-in users to your App instead of implementing a separate User Login flow. You need to provide a redirectUri in the URLSearch params (`https://dashboard.heyvincent.ai/appId/160/consent?redirectUri=http://localhost:3000`) to receive the signed JWT from the user's Agent Wallet after they log in on the Vincent Consent Page. This can be used as the User's Auth for your App, for example, use it as the user's access token for your API requests.
 
 	- Install the Vincent SDK using NPM:
 	```javascript
@@ -79,7 +82,7 @@ In this Quick Start guide you'll learn everything about Vincent Apps and how to 
 	}
 	```
 
-	- **[Execute Tools for User's Wallet](https://sdk-docs.heyvincent.ai/Vincent_Tools/VincentToolClient.html#execute):** You need to create SessionSigs using your Delegatee wallet and use it to call the `executeJs()` function for the permitted Tool. This is where you provide all your AI-Agentic logic in the jsParams of the `executeJs()`, for example, the tokens to buy and at what price. You can also query all the delegated users for your App using `getAllDelegatedUsers()`.
+	- **[Execute Tools for User's Wallet](https://sdk-docs.heyvincent.ai/Vincent_Tools/VincentToolClient.html#execute):** This is where you provide all your AI-Agentic logic in the `params` object of the `execute()` function, for example, the tokens to buy and at what price.
 
 	```javascript
 	import { ethers } from 'ethers';
@@ -88,5 +91,6 @@ In this Quick Start guide you'll learn everything about Vincent Apps and how to 
 	const delegateePrivateKey = DELEGATEE_PRIVATE_KEY_GENERATED_FROM_APP_DASHBOARD;
 	const delegateeSigner = new ethers.Wallet(delegateePrivateKey, provider);
 	const vincentToolClient = getVincentToolClient({ ethersSigner: delegateeSigner, vincentToolCid: YOUR_TOOL_IPFS_CID });
+	// params = { amountIn: (wethAmount).toFixed(18).toString(), chainId: BASE_CHAIN_ID, pkpEthAddress: agentWalletAddress, rpcUrl: BASE_RPC_URL, tokenIn: WETH_ADDRESS }
 	const res = await vincentToolClient.execute({ params }); // This is the result of executing the Tool usually a txReceipt for the broadcasted tx
 	```
