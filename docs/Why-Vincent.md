@@ -7,7 +7,7 @@ slug: /
 	:::info Demo
 	Try out the Dollar-Cost-Averaging [demo](https://demo.heyvincent.ai/) that buys top memecoins on Base.
 	
-	You can follow the end-to-end code for the DCA demo.
+	You can follow the [end-to-end code](https://github.com/LIT-Protocol/vincent-dca/tree/main) for the DCA demo.
 	:::
 
 # Overview
