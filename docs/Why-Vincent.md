@@ -2,7 +2,7 @@
 slug: /
 ---
 
-# Build Secure, User-Owned AI Agents
+# Build Automated, User-Controlled AI Agents
 
 Vincent is an open-source framework powered by [Lit Protocol](https://litprotocol.com/) that empowers developers to create automated, user-controlled AI agents. With Vincent, you can build agents that automate the execution of operations across crypto networks, traditional finance (TradFi), and e-commerce platforms—all while ensuring users retain full control over their assets and data. Powered by Lit’s decentralized [key management network](https://developer.litprotocol.com/resources/how-it-works) and smart contracts, Vincent is your gateway to the future of the automated, User-Owned Web.
 
