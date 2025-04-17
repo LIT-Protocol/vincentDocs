@@ -4,7 +4,7 @@ pagination_next: Contact-Us
 
 # Onboarding
 
-Each time you visit an app on Vincent, you’ll be directed to that app’s dedicated consent page. This is where you will configure and manage your app-specific delegations, permitting it to use your assets and data according to the guidelines you set. Follow the steps below to begin your journey
+Each time you visit an app on Vincent, you’ll be directed to that app’s dedicated consent page. This is where you will configure and manage your app-specific delegations, permitting it to use your assets and data according to the guidelines you set. Follow the steps below to begin your journey.
 
 ## 1. Create an Agent Wallet
 
