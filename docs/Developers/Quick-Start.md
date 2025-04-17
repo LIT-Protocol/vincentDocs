@@ -5,16 +5,20 @@
 	You can follow the [end-to-end code](https://github.com/LIT-Protocol/vincent-dca/tree/main) for the DCA demo.
 	:::
 
-In this Quick Start guide you'll learn everything about Vincent Apps and how to register your own Vincent App. Follow the below steps to register your Vincent App:
+In this Quick Start guide you'll learn how to register your first Vincent app:
 
-## 1. Selecting Tools & Policies
-	- **Tools:** Vincent Tools are the operations that an Agent can perform on *behalf* of the user and are codified as Lit Actions. Lit Actions are immutable Javascript code snippets assigned to the Agent's wallet. As a Vincent App developer you prompt the user, via the [Consent Page](../Users/Onboarding.md), to delegate the execution of these Tools for their Agent wallets thus allowing you to autonomously execute these pre-defined operations on behalf of your users.
+## 1. Creating Tools & Policies
+	- **Tools:** Vincent Tools are [Lit Actions](https://developer.litprotocol.com/sdk/serverless-signing/overview) that are used to define the specific operations that your Vincent app can perform on *behalf* of your users. As a Vincent App developer, you can prompt your users to permit these Tools access to their Agent Wallet using the Vincent [Consent Page](../Users/Onboarding.md). This enables your application to perform these specific operations on behalf of the user, fully programmatically according to the guardrails they set via Policies.
 
-	- **Policies:** Users can set guard-rails for the permitted Tools to dictate the operating conditions for that Tool. Tools can have multiple Policies like max daily spend or 2FA and all these policies should be met before the Tool can sign using the delegated user's Agent wallet. This also becomes important since your AI Agents can occasionally halucinate. Just like the Tools, Policies are also codified as Lit Action and you as a developer prompt the user a set of optional Policies for each Tool via the Consent Page.
+	- **Policies:** Users can set guardrails for the Tools they permit which dictate the operating conditions for that Tool. Each Tool can have any number of Policies associated with it, such as maximum daily spending limits or multi-factor authentication (MFA). The Vincent delegation system ensures that all of these policies are met before a given Tool can be executed using the delegated user's Agent Wallet. Just like Tools, Policies are also Lit Actions and your job as the app developer is to provide the the user with a set of optional Policies for each Tool using the Consent Page.
 
 	- **Policy Variables:** Each Policy can optionally have multiple Policy Vars. For example, max spend policy can have two vars: spend duration (hourly/daily/weekly) and max spend amount ($). These Policy Vars values are fully configurable by the user.
 
 	- **Selecting from existing Tool-Policy Registry:** You can select any of the following available Tools & their Policies to get quickly off the ground and register your Vincent App.
+
+	:::info Note
+	The Vincent Tool Registry will be published soon. Join the [Lit Builders Circle](https://t.me/c/2038294753/4) to stay up to date.
+	:::
 
 		**Available Tools & Policies:**
 		| Tool | IPFS Cid |
