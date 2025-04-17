@@ -40,7 +40,6 @@ const sidebars = {
         'Users/Onboarding',
       ],
     },
-    //'Contact-Us',
   ],
 };
 
