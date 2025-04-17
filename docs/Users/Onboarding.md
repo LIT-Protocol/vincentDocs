@@ -8,7 +8,7 @@ Each time you visit an app on Vincent, you’ll be directed to that app’s dedi
 
 ## 1. Create an Agent Wallet
 
-The first time you visit an app powered by Vincent, you’ll be prompted to create your Agent Wallet using a credential of your choice. Currently, email, phone number, and Passkey methods are supported. This credential is used to control your Agent Wallet which is securely managed by Lit Protocol’s [decentralized key management network](https://developer.litprotocol.com/resources/how-it-works). You will have the ability to use the same Agent Wallet across all Vincent apps, or create a new one if you choose to.
+The first time you visit an app powered by Vincent, you’ll be prompted to create your Agent Wallet using a credential of your choice. Currently, email, phone number, and Passkey methods are supported. This credential is used to control your Agent Wallet which is securely managed by Lit Protocol’s [decentralized key management network](https://developer.litprotocol.com/resources/how-it-works). By default, the same Agent Wallet will be used across all Vincent applications.
 
 ![User Login](./images/login.png)
 
