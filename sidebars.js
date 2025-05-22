@@ -16,29 +16,25 @@
  */
 const sidebars = {
   tutorialSidebar: [
-    'Why-Vincent',
+    "Why-Vincent",
+    "Concepts",
     {
-      type: 'category',
-      label: 'Developers',
+      type: "category",
+      label: "Developers",
       link: {
-        type: 'doc',
-        id: 'Developers/Quick-Start',
+        type: "doc",
+        id: "Developers/Quick-Start",
       },
-      items: [
-        'Developers/Quick-Start',
-        'Developers/Custom-Tools',
-      ],
+      items: ["Developers/Quick-Start", "Developers/Custom-Tools"],
     },
     {
-      type: 'category',
-      label: 'Users',
+      type: "category",
+      label: "Users",
       link: {
-        type: 'doc',
-        id: 'Users/Onboarding',
+        type: "doc",
+        id: "Users/Onboarding",
       },
-      items: [
-        'Users/Onboarding',
-      ],
+      items: ["Users/Onboarding"],
     },
   ],
 };
